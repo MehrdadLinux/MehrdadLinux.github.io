@@ -25,7 +25,7 @@ highlight: rouge
 encoding: utf-8
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-architect
+theme: minima
 plugins:
   - jekyll-feed
 
