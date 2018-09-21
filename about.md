@@ -22,12 +22,21 @@ You can find me on a variety of world wild interweb sites where my username is u
 - [Twitter](http://twitter.com/MehrdadLinux) — a good way to make contact
 - [GitHub](https://github.com/MehrdadLinux) — code, juicy code
 - [Instagram](http://instagram.com/MehrdadLinux/) — short stories via photo snapshots
-- [Flickr](http://www.flickr.com/photos/MehrdadLinux/) — photography
 - [Facebook](http://www.facebook.com/MehrdadLinux) — friends and foes
+- [coderbyte](https://coderbyte.com/profile/mehrdadlinux) — improve coding skills
+- [codecademy](https://www.codecademy.com/MehrdadLinux) — improve coding skills
+- [codesignal](https://app.codesignal.com/profile/mehrdadlinux) — improve coding skills
+- [hackerrank](https://www.hackerrank.com/mehrdadlinux) — improve coding skills
+- [rosalind](http://rosalind.info/users/Mehrdadlinux/) — improve coding skills
+- [codewars](https://www.codewars.com/users/mehrdadlinux) — improve coding skills
+- [checkio](https://py.checkio.org/user/mehrdadlinux/) — improve coding skills
+- [codingame](https://www.codingame.com/profile/dd19d7ad535a1a90d85caa6d1f49cd777501451) — improve coding skills
+### <img src="http://www.codeabbey.com/index/user_banner/mehrdadlinux.png" />
+### <img src="https://projecteuler.net/profile/mehrdadlinux2.png" />
+
 
 ### [<img src="/res/twitter.png" width="29" height="20" style="display:inline-block;vertical-align:middle"> @MehrdadLinux](http://twitter.com/MehrdadLinux)
-### [<img src="http://www.codeabbey.com/index/user_banner/mehrdadlinux.png" />]
-### [<img src="https://projecteuler.net/profile/mehrdadlinux2.png" />]
+
 If you need my Bank account number
 
 - Bank Mellat Card Number : 6104-3378-6897-6000
