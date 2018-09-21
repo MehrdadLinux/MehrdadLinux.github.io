@@ -26,7 +26,8 @@ You can find me on a variety of world wild interweb sites where my username is u
 - [Facebook](http://www.facebook.com/MehrdadLinux) — friends and foes
 
 ### [<img src="/res/twitter.png" width="29" height="20" style="display:inline-block;vertical-align:middle"> @MehrdadLinux](http://twitter.com/MehrdadLinux)
-
+### [<img src="http://www.codeabbey.com/index/user_banner/mehrdadlinux.png" />]
+### [<img src="https://projecteuler.net/profile/mehrdadlinux2.png" />]
 If you need my Bank account number
 
 - Bank Mellat Card Number : 6104-3378-6897-6000
