@@ -28,9 +28,14 @@ You can find me on a variety of world wild interweb sites where my username is u
 - [codesignal](https://app.codesignal.com/profile/mehrdadlinux) — improve coding skills
 - [hackerrank](https://www.hackerrank.com/mehrdadlinux) — improve coding skills
 - [rosalind](http://rosalind.info/users/Mehrdadlinux/) — improve coding skills
+- [exercism](https://exercism.io/profiles/MehrdadLinux) — improve coding
 - [codewars](https://www.codewars.com/users/mehrdadlinux) — improve coding skills
 - [checkio](https://py.checkio.org/user/mehrdadlinux/) — improve coding skills
-- [codingame](https://www.codingame.com/profile/dd19d7ad535a1a90d85caa6d1f49cd777501451) — improve coding skills
+- [codingame](https://www.codingame.com/profile/dd19d7ad535a1a90d85caa6d1f49cd777501451) — improve coding
+
+
+
+ skills
 ### <img src="http://www.codeabbey.com/index/user_banner/mehrdadlinux.png" />
 ### <img src="https://projecteuler.net/profile/mehrdadlinux2.png" />
 
