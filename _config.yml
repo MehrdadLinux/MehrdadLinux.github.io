@@ -16,7 +16,7 @@
 title: MehrdadLinux وبلاگ
 email: MehrdadLinux@Gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  MehrdadLinux این وبلاگ مهرداد لینوکسه دوست دارم روزمرگی هامو اینجا بنویسم
+  MehrdadLinux این وبلاگ مهرداد لینوکسه. دوست دارم روزمرگی هامو اینجا بنویسم
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MehrdadLinux
@@ -41,3 +41,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
