@@ -23,6 +23,8 @@ You can find me on a variety of world wild interweb sites where my username is u
 - [GitHub](https://github.com/MehrdadLinux) — code, juicy code
 - [Instagram](http://instagram.com/MehrdadLinux/) — short stories via photo snapshots
 - [Facebook](http://www.facebook.com/MehrdadLinux) — friends and foes
+- [Udemy](https://www.udemy.com/user/mehrdad-linux/)— my Video
+
 
 Improve Coding Skills
 
@@ -35,6 +37,7 @@ Improve Coding Skills
 - [codewars](https://www.codewars.com/users/mehrdadlinux) 
 - [checkio](https://py.checkio.org/user/mehrdadlinux/) 
 - [codingame](https://www.codingame.com/profile/dd19d7ad535a1a90d85caa6d1f49cd777501451) 
+
 ### <img src="http://www.codeabbey.com/index/user_banner/mehrdadlinux.png" />
 ### <img src="https://projecteuler.net/profile/mehrdadlinux2.png" />
 
@@ -52,13 +55,19 @@ Improve skills in Cyber Security.
 - [enigmagroup](https://www.enigmagroup.org/profile/53552)
 - [halls-of-valhalla](https://halls-of-valhalla.org/beta/user/mehrdadlinux)
 - [pentestit](https://lab.pentestit.ru/profile/mehrdadlinux)
+- [crackmes](https://crackmes.one/user/mehrdadlinux)
 - [enigmagroup](https://www.enigmagroup.org/profile/53552)
 - [hack.me](https://me.hack.me/)
 - [overthewire](http://overthewire.org/wargames/)
+
 ### <img src="https://www.hackthebox.eu/badge/image/127085" alt="Hack The Box">
 
 
 ### [<img src="/res/twitter.png" width="29" height="20" style="display:inline-block;vertical-align:middle"> @MehrdadLinux](http://twitter.com/MehrdadLinux)
+
+Archive of MyUsers Account 
+
+- [launchpad](https://launchpad.net/~mehrdadlinux)
 
 If you need my Bank account number
 
