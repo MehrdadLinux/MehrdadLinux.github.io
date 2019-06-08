@@ -45,7 +45,6 @@ Improve skills in Cyber Security.
 
 - [Thisislegal](https://thisislegal.com/user/profile/mehrdadlinux)
 - [Root-me](https://https://www.root-me.org/mehrdadlinux)
-- [thisislegal](https://thisislegal.com/user/profile/mehrdadlinux)
 - [microcorruption](https://microcorruption.com/profile/39418)
 - [hackthebox](https://www.hackthebox.eu/profile/127085)
 - [cybersecuritychallenge](https://pod.cybersecuritychallenge.org.uk/user/view.php?id=35817)
