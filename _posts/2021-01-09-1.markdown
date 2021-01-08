@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'how use socks proxy in linux apt '
+date: '2021-01-09'
+categories: linux
+---
+Do you need use socks proxy in apt?
+
+It is very is just 
+
+open apt.conf in /etc/apt/apt.conf with your favorites editor for example use xed in Linux mint  (If it does not exist make it :D)
+
+xed /etc/apt/apt.conf
+
+and add this code in it 
+
+Acquire::http::Proxy "socks5h://your_proxy_server:port";
+
