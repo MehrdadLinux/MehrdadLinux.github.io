@@ -6,9 +6,9 @@ categories: linux
 ---
 Do you need use socks proxy in apt?
 
-It is very is just 
+It is very easy  just 
 
-open apt.conf in /etc/apt/apt.conf with your favorites editor for example use xed in Linux mint  (If it does not exist make it :D)
+open apt.conf in /etc/apt/apt.conf with your favorites editor for example use xed in Linux mint  (If the file in path it is not exist make it :D)
 
 xed /etc/apt/apt.conf
 
