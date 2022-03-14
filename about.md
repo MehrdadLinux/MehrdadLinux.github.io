@@ -1,10 +1,8 @@
 ---
 layout: page
-fb_comments: 3
 title: About
-comments: true
 ---
-  {% include analytics.html %}
+
 <img src="portrait.jpg" width="50%" align="right">
 
 Hello. My name is Mehrdad Abbasi (pronounced as [MEH-RDaa-D)""] in English and written as: "مهرداد عباسی" in Persian). . I'm a Security Researcher living in Iran with a passion for art and technology, who have worked with a number of different companies since the 2008, including
