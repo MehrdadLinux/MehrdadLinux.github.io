@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]'
+date: '2022-03-14'
+categories: Network
+---
+When I want to give an IP to a service, I usually use DHCP Reservation and static the IP value by mac if you are in the ESXI system.
+In some cases, you will face the following problem.
+DHCP answered the IP request, but the ESXI did not set the IP.
+
+Answer :
+
+The reason for this situation is that in this DHCP server, the default gateway value is not set and only gives the IP
+That is why ESXI does not accept this IP from DHCP.
+
+So you need to make sure your DHCP sets the default gateway value.
+
+

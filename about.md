@@ -8,9 +8,8 @@ comments: true
 <img src="portrait.jpg" width="50%" align="right">
 
 Hello. My name is Mehrdad Abbasi (pronounced as [MEH-RDaa-D)""] in English and written as: "مهرداد عباسی" in Persian). . I'm a Security Researcher living in Iran with a passion for art and technology, who have worked with a number of different companies since the 2008, including
-[Mojsazan](https://www.Mojsazan.com),
-[Pardazeshgaran](https://Pardazeshgaran.com),
-[Cvak](https://www.Cvak.com/)
+Mojsazan,
+Pardazeshgaran,
 and my own company Opsnit.
 More information can be found through [LinkedIn](http://www.linkedin.com/in/MehrdadLinux).
 
@@ -22,11 +21,9 @@ You can find me on a variety of world wild interweb sites where my username is u
 - [Twitter](http://twitter.com/MehrdadLinux) — a good way to make contact
 - [GitHub](https://github.com/MehrdadLinux) — code, juicy code
 - [Instagram](http://instagram.com/MehrdadLinux/) — short stories via photo snapshots
-- [Facebook](http://www.facebook.com/MehrdadLinux) — friends and foes
-- [Udemy](https://www.udemy.com/user/mehrdad-linux/)— my Video
 
 
-Improve Coding Skills
+<!-- Improve Coding Skills
 
 - [hackerrank](https://www.hackerrank.com/mehrdadlinux)
 - [exercism](https://exercism.io/profiles/MehrdadLinux) 
@@ -39,9 +36,9 @@ Improve Coding Skills
 - [codingame](https://www.codingame.com/profile/dd19d7ad535a1a90d85caa6d1f49cd777501451) 
 
 ### <img src="http://www.codeabbey.com/index/user_banner/mehrdadlinux.png" />
-### <img src="https://projecteuler.net/profile/mehrdadlinux2.png" />
+### <img src="https://projecteuler.net/profile/mehrdadlinux2.png" /> -->
  
-Improve skills in Cyber Security. 
+<!-- Improve skills in Cyber Security. 
 
 - [Thisislegal](https://thisislegal.com/user/profile/mehrdadlinux)
 - [Root-me](http://www.root-me.org/mehrdadlinux)
@@ -70,7 +67,7 @@ Archive of MyUsers Account
 
 - [launchpad](https://launchpad.net/~mehrdadlinux)
 - [crackmes](https://crackmes.one/user/mehrdadlinux)
-- [wechall](http://www.wechall.net/profile/mehrdadlinux)
+- [wechall](http://www.wechall.net/profile/mehrdadlinux) -->
 
 If you need my Bank account number
 
