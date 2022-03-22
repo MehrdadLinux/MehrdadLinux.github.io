@@ -1,0 +1,75 @@
+---
+layout: post
+title: 'vagrant-cachier dnf problem[SOLVED]'
+date: '2022-03-14'
+categories: Virtualization
+---
+Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances
+
+## Installation
+    
+    vagrant plugin install vagrant-cachier
+
+
+## How to use it
+
+    Vagrant.configure("2") do |config|
+        config.vm.box = 'your-box'
+            if Vagrant.has_plugin?("vagrant-cachier")
+                config.cache.scope = :box
+                config.cache.synced_folder_opts = {
+                    type: :nfs,
+                    mount_options: ['rw', 'vers=3', 'tcp', 'nolock']
+                }
+            end
+    end
+
+
+## Fedora and dnf Problem
+
+When you try to use a Vagrant-cachier with Fedora, you get an error like this
+
+VagrantPlugins::Cachier::Bucket::Dnf
+
+    /install_buckets.rb:43:in `block in configure_cache_buckets'
+    /root/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/bucket.rb:23:in `install': uninitialized constant VagrantPlugins::Cachier::Bucket::Dnf (NameError)
+
+or 
+
+## yum not found
+
+    Vagrant assumes that this means the command failed!
+    sed -i 's/keepcache=0/keepcache=1/g' /etc/yum.conf
+    Stdout from the command:
+    Stderr from the command:
+    sed: can't read /etc/yum.conf: No such file or directory
+
+
+## Answer  Here's how you can fix it:
+
+Using git, you must manually update it 
+
+## What caused this to happen ?
+
+- vagrant-cachier have 5 Releases  latest one is  v1.2.0 on Jan 14, 2015
+
+- dnf plugin patch for vagrant-cachier  Merge pull request on Nov 22, 2016
+
+- This project is looking for maintainers so update is not in repository
+
+## How to manually update it 
+
+use git to clone project 
+
+    git clone https://github.com/fgrehm/vagrant-cachier
+
+You must go to the location where you installed Vagrant 
+
+
+    /[your_user]/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/
+
+
+Sync to folder 
+
+done
+Do you have a question?

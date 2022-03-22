@@ -1,34 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-14T18:22:52+03:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><entry><title type="html">Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]</title><link href="http://localhost:4000/network/2022/03/14/1.html" rel="alternate" type="text/html" title="Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]" /><published>2022-03-14T00:00:00+03:30</published><updated>2022-03-14T00:00:00+03:30</updated><id>http://localhost:4000/network/2022/03/14/1</id><content type="html" xml:base="http://localhost:4000/network/2022/03/14/1.html">&lt;p&gt;When I want to give an IP to a service, I usually use DHCP Reservation and static the IP value by mac if you are in the ESXI system.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-22T15:34:51+04:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><entry><title type="html">Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]</title><link href="http://localhost:4000/network/2022/03/14/1.html" rel="alternate" type="text/html" title="Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]" /><published>2022-03-14T00:00:00+03:30</published><updated>2022-03-14T00:00:00+03:30</updated><id>http://localhost:4000/network/2022/03/14/1</id><content type="html" xml:base="http://localhost:4000/network/2022/03/14/1.html"><![CDATA[<p>When I want to give an IP to a service, I usually use DHCP Reservation and static the IP value by mac if you are in the ESXI system.
 In some cases, you will face the following problem.
-DHCP answered the IP request, but the ESXI did not set the IP.&lt;/p&gt;
+DHCP answered the IP request, but the ESXI did not set the IP.</p>
 
-&lt;p&gt;Answer :&lt;/p&gt;
+<p>Answer :</p>
 
-&lt;p&gt;The reason for this situation is that in this DHCP server, the default gateway value is not set and only gives the IP
-That is why ESXI does not accept this IP from DHCP.&lt;/p&gt;
+<p>The reason for this situation is that in this DHCP server, the default gateway value is not set and only gives the IP
+That is why ESXI does not accept this IP from DHCP.</p>
 
-&lt;p&gt;So you need to make sure your DHCP sets the default gateway value.&lt;/p&gt;</content><author><name></name></author><summary type="html">When I want to give an IP to a service, I usually use DHCP Reservation and static the IP value by mac if you are in the ESXI system. In some cases, you will face the following problem. DHCP answered the IP request, but the ESXI did not set the IP.</summary></entry><entry><title type="html">how use socks proxy in linux apt</title><link href="http://localhost:4000/linux/2021/01/09/1.html" rel="alternate" type="text/html" title="how use socks proxy in linux apt " /><published>2021-01-09T00:00:00+03:30</published><updated>2021-01-09T00:00:00+03:30</updated><id>http://localhost:4000/linux/2021/01/09/1</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/09/1.html">&lt;p&gt;Do you need use socks proxy in apt?&lt;/p&gt;
+<p>So you need to make sure your DHCP sets the default gateway value.</p>]]></content><author><name></name></author><category term="Network" /><summary type="html"><![CDATA[When I want to give an IP to a service, I usually use DHCP Reservation and static the IP value by mac if you are in the ESXI system. In some cases, you will face the following problem. DHCP answered the IP request, but the ESXI did not set the IP.]]></summary></entry><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/14/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-14T00:00:00+03:30</published><updated>2022-03-14T00:00:00+03:30</updated><id>http://localhost:4000/virtualization/2022/03/14/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/14/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
 
-&lt;p&gt;It is very easy  just&lt;/p&gt;
+<h2 id="installation">Installation</h2>
 
-&lt;p&gt;open apt.conf in /etc/apt/apt.conf with your favorites editor for example use xed in Linux mint  (If the file in path it is not exist make it :D)&lt;/p&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant plugin install vagrant-cachier
+</code></pre></div></div>
 
-&lt;p&gt;xed /etc/apt/apt.conf&lt;/p&gt;
+<h2 id="how-to-use-it">How to use it</h2>
 
-&lt;p&gt;and add this code in it&lt;/p&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
+    config.vm.box = 'your-box'
+        if Vagrant.has_plugin?("vagrant-cachier")
+            config.cache.scope = :box
+            config.cache.synced_folder_opts = {
+                type: :nfs,
+                mount_options: ['rw', 'vers=3', 'tcp', 'nolock']
+            }
+        end
+end
+</code></pre></div></div>
 
-&lt;p&gt;Acquire::http::Proxy “socks5h://your_proxy_server:port”;&lt;/p&gt;</content><author><name></name></author><summary type="html">Do you need use socks proxy in apt?</summary></entry><entry><title type="html">Sharp or Number sign, that is the question</title><link href="http://localhost:4000/programming/2020/10/08/1.html" rel="alternate" type="text/html" title="Sharp or Number sign, that is the question" /><published>2020-10-08T00:00:00+03:30</published><updated>2020-10-08T00:00:00+03:30</updated><id>http://localhost:4000/programming/2020/10/08/1</id><content type="html" xml:base="http://localhost:4000/programming/2020/10/08/1.html">&lt;p&gt;Some people think a symbol in front of C# is Sharp are you agree or disagree?&lt;/p&gt;
+<h2 id="fedora-and-dnf-problem">Fedora and dnf Problem</h2>
 
-&lt;p&gt;Years after the introduction of C#, the prevalence of very big mistakes or misunderstand in computer society.
+<p>When you try to use a Vagrant-cachier with Fedora, you get an error like this</p>
+
+<p>VagrantPlugins::Cachier::Bucket::Dnf</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/install_buckets.rb:43:in `block in configure_cache_buckets'
+/root/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/bucket.rb:23:in `install': uninitialized constant VagrantPlugins::Cachier::Bucket::Dnf (NameError)
+</code></pre></div></div>
+
+<p>or</p>
+
+<h2 id="yum-not-found">yum not found</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant assumes that this means the command failed!
+sed -i 's/keepcache=0/keepcache=1/g' /etc/yum.conf
+Stdout from the command:
+Stderr from the command:
+sed: can't read /etc/yum.conf: No such file or directory
+</code></pre></div></div>
+
+<h2 id="answer--heres-how-you-can-fix-it">Answer  Here’s how you can fix it:</h2>
+
+<p>Using git, you must manually update it</p>
+
+<h2 id="what-caused-this-to-happen-">What caused this to happen ?</h2>
+
+<ul>
+  <li>
+    <p>vagrant-cachier have 5 Releases  latest one is  v1.2.0 on Jan 14, 2015</p>
+  </li>
+  <li>
+    <p>dnf plugin patch for vagrant-cachier  Merge pull request on Nov 22, 2016</p>
+  </li>
+  <li>
+    <p>This project is looking for maintainers so update is not in repository</p>
+  </li>
+</ul>
+
+<h2 id="how-to-manually-update-it">How to manually update it</h2>
+
+<p>use git to clone project</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/fgrehm/vagrant-cachier
+</code></pre></div></div>
+
+<p>You must go to the location where you installed Vagrant</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/[your_user]/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/
+</code></pre></div></div>
+
+<p>Sync to folder</p>
+
+<p>done
+Do you have a question?</p>]]></content><author><name></name></author><category term="Virtualization" /><summary type="html"><![CDATA[Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances]]></summary></entry><entry><title type="html">how use socks proxy in linux apt</title><link href="http://localhost:4000/linux/2021/01/09/1.html" rel="alternate" type="text/html" title="how use socks proxy in linux apt" /><published>2021-01-09T00:00:00+03:30</published><updated>2021-01-09T00:00:00+03:30</updated><id>http://localhost:4000/linux/2021/01/09/1</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/09/1.html"><![CDATA[<p>Do you need use socks proxy in apt?</p>
+
+<p>It is very easy  just</p>
+
+<p>open apt.conf in /etc/apt/apt.conf with your favorites editor for example use xed in Linux mint  (If the file in path it is not exist make it :D)</p>
+
+<p>xed /etc/apt/apt.conf</p>
+
+<p>and add this code in it</p>
+
+<p>Acquire::http::Proxy “socks5h://your_proxy_server:port”;</p>]]></content><author><name></name></author><category term="linux" /><summary type="html"><![CDATA[Do you need use socks proxy in apt?]]></summary></entry><entry><title type="html">Sharp or Number sign, that is the question</title><link href="http://localhost:4000/programming/2020/10/08/1.html" rel="alternate" type="text/html" title="Sharp or Number sign, that is the question" /><published>2020-10-08T00:00:00+03:30</published><updated>2020-10-08T00:00:00+03:30</updated><id>http://localhost:4000/programming/2020/10/08/1</id><content type="html" xml:base="http://localhost:4000/programming/2020/10/08/1.html"><![CDATA[<p>Some people think a symbol in front of C# is Sharp are you agree or disagree?</p>
+
+<p>Years after the introduction of C#, the prevalence of very big mistakes or misunderstand in computer society.
 Call # Sharp again of the number sign 
 For example when a junior programmer or junior computer scientist saw a # in Twitter some of them call it sharp :O or hashtag
 although hash is another name for number sign, you can not call it sharp when you saw it on most of the web.
-In this article we are going to discuss, what is different between symbol # we known as the number sign, hash  “#”  and music symbol, sharp, means higher in pitch and we write it “♯” (U+266F in Unicode)&lt;/p&gt;
+In this article we are going to discuss, what is different between symbol # we known as the number sign, hash  “#”  and music symbol, sharp, means higher in pitch and we write it “♯” (U+266F in Unicode)</p>
 
-&lt;p&gt;Why the Microsoft call it new programming languages C Sharp? Microsoft wants to introduce a higher-level programming language from C++ with more facilities. They looking for new symbols and they find sharp. The sharp symbol is so perfect because it looks like 4 plus ++++
-and it means higher in pitch in music. They had a very big problem.&lt;/p&gt;
+<p>Why the Microsoft call it new programming languages C Sharp? Microsoft wants to introduce a higher-level programming language from C++ with more facilities. They looking for new symbols and they find sharp. The sharp symbol is so perfect because it looks like 4 plus ++++
+and it means higher in pitch in music. They had a very big problem.</p>
 
-&lt;p&gt;You can not type sharp directly from the keyboard :(.
-so they decide to choose hashtag along sharp&lt;/p&gt;
+<p>You can not type sharp directly from the keyboard :(.
+so they decide to choose hashtag along sharp</p>
 
-&lt;p&gt;In conclusion, although we write C# (pronounce c sharp), this # a lonely pronounce number sign or hash&lt;/p&gt;</content><author><name></name></author><summary type="html">Some people think a symbol in front of C# is Sharp are you agree or disagree?</summary></entry></feed>
+<p>In conclusion, although we write C# (pronounce c sharp), this # a lonely pronounce number sign or hash</p>]]></content><author><name></name></author><category term="programming" /><summary type="html"><![CDATA[Some people think a symbol in front of C# is Sharp are you agree or disagree?]]></summary></entry></feed>
