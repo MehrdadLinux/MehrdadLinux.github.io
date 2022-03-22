@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-22T15:38:43+04:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/22/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-22T01:00:00+04:30</published><updated>2022-03-22T01:00:00+04:30</updated><id>http://localhost:4000/virtualization/2022/03/22/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/22/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-22T16:26:22+04:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/22/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-22T01:00:00+04:30</published><updated>2022-03-22T01:00:00+04:30</updated><id>http://localhost:4000/virtualization/2022/03/22/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/22/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
 
 <h2 id="installation">Installation</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant plugin install vagrant-cachier
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant plugin install vagrant-cachier
 </code></pre></div></div>
 
 <h2 id="how-to-use-it">How to use it</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
     config.vm.box = 'your-box'
         if Vagrant.has_plugin?("vagrant-cachier")
             config.cache.scope = :box
@@ -25,7 +25,7 @@ end
 
 <p>VagrantPlugins::Cachier::Bucket::Dnf</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/install_buckets.rb:43:in `block in configure_cache_buckets'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/install_buckets.rb:43:in `block in configure_cache_buckets'
 /root/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/bucket.rb:23:in `install': uninitialized constant VagrantPlugins::Cachier::Bucket::Dnf (NameError)
 </code></pre></div></div>
 
@@ -33,7 +33,7 @@ end
 
 <h2 id="yum-not-found">yum not found</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant assumes that this means the command failed!
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant assumes that this means the command failed!
 sed -i 's/keepcache=0/keepcache=1/g' /etc/yum.conf
 Stdout from the command:
 Stderr from the command:
@@ -62,12 +62,12 @@ sed: can't read /etc/yum.conf: No such file or directory
 
 <p>use git to clone project</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/fgrehm/vagrant-cachier
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/fgrehm/vagrant-cachier
 </code></pre></div></div>
 
 <p>You must go to the location where you installed Vagrant</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/[your_user]/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/[your_user]/.vagrant.d/gems/2.6.6/gems/vagrant-cachier-1.2.1/lib/vagrant-cachier/
 </code></pre></div></div>
 
 <p>Sync to folder</p>
