@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'vagrant-cachier dnf problem[SOLVED]'
-date: '2022-03-14'
+date: '2022-03-22'
 categories: Virtualization
 ---
 Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances
