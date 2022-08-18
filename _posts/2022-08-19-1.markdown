@@ -1,0 +1,41 @@
+---
+layout: post
+title: 'Open Jupyter Notebook here , one click very fast[SOLVED]'
+date: '2022-08-19'
+categories: Linux
+---
+Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents. 
+
+## Running the Jupyter Notebook
+    
+To launch Jupyter Notebook App:
+- Click on spotlight, type terminal to open a terminal window.
+- Enter the startup folder by typing cd /some_folder_name .
+- Type jupyter notebook to launch the Jupyter Notebook App The notebook interface will appear in a new browser window or tab.
+
+## How do it faster
+
+Copy  this script and save it in file 
+
+        #!/bin/bash
+        source "/[yourenv if you install it in env ]/bin/activate" # if you use venv
+        jupyter-lab --notebook-dir=$PWD  # use $PWD for open here
+
+
+## Gnome scripts
+
+GNOME Files, formerly and internally known as Nautilus, is the official file manager for the GNOME desktop
+Nautilus script is an executable shell script that is placed in a special scripts directory so that the Nautilus graphical shell can find it. This allows you to extend the functionality of the file browser to do just about anything.
+
+         ~/.local/share/nautilus/scripts/
+
+## How it works?
+
+Copy script in Gnome scripts path and change file permission
+
+        chmod a+x [yourscript]
+
+Righclick on folder and select yourscript 
+done
+
+Do you have a question?
