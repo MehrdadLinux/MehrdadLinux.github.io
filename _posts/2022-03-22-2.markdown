@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Open Jupyter Notebook here one click very fast[SOLVED]'
-date: '2022-08-19'
+date: '2022-03-22'
 categories: linux
 ---
 Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents. 
