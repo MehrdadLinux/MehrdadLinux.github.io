@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-19T02:19:23+04:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/22/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-22T01:00:00+04:30</published><updated>2022-03-22T01:00:00+04:30</updated><id>http://localhost:4000/virtualization/2022/03/22/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/22/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-19T02:28:42+04:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><entry><title type="html">Open Jupyter Notebook here , one click very fast[SOLVED]</title><link href="http://localhost:4000/linux/2022/08/19/1.html" rel="alternate" type="text/html" title="Open Jupyter Notebook here , one click very fast[SOLVED]" /><published>2022-08-19T00:00:00+04:30</published><updated>2022-08-19T00:00:00+04:30</updated><id>http://localhost:4000/linux/2022/08/19/1</id><content type="html" xml:base="http://localhost:4000/linux/2022/08/19/1.html"><![CDATA[<p>Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents.</p>
+
+<h2 id="running-the-jupyter-notebook">Running the Jupyter Notebook</h2>
+
+<p>To launch Jupyter Notebook App:</p>
+<ul>
+  <li>Click on spotlight, type terminal to open a terminal window.</li>
+  <li>Enter the startup folder by typing cd /some_folder_name .</li>
+  <li>Type jupyter notebook to launch the Jupyter Notebook App The notebook interface will appear in a new browser window or tab.</li>
+</ul>
+
+<h2 id="how-do-it-faster">How do it faster</h2>
+
+<p>Copy  this script and save it in file</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #!/bin/bash
+    source "/[yourenv if you install it in env ]/bin/activate" # if you use venv
+    jupyter-lab --notebook-dir=$PWD  # use $PWD for open here
+</code></pre></div></div>
+
+<h2 id="gnome-scripts">Gnome scripts</h2>
+
+<p>GNOME Files, formerly and internally known as Nautilus, is the official file manager for the GNOME desktop
+Nautilus script is an executable shell script that is placed in a special scripts directory so that the Nautilus graphical shell can find it. This allows you to extend the functionality of the file browser to do just about anything.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     ~/.local/share/nautilus/scripts/
+</code></pre></div></div>
+
+<h2 id="how-it-works">How it works?</h2>
+
+<p>Copy script in Gnome scripts path and change file permission</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    chmod a+x [yourscript]
+</code></pre></div></div>
+
+<p>Righclick on folder and select yourscript 
+done</p>
+
+<p>Do you have a question?</p>]]></content><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><category term="Linux" /><summary type="html"><![CDATA[Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents.]]></summary></entry><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/22/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-22T01:00:00+04:30</published><updated>2022-03-22T01:00:00+04:30</updated><id>http://localhost:4000/virtualization/2022/03/22/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/22/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
 
 <h2 id="installation">Installation</h2>
 
@@ -71,6 +109,10 @@ sed: can't read /etc/yum.conf: No such file or directory
 </code></pre></div></div>
 
 <p>Sync to folder</p>
+
+<h2 id="the-latest-experience">The latest experience</h2>
+
+<p>**dont use this plugin for Fedora and dnf **</p>
 
 <p>done
 Do you have a question?</p>]]></content><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><category term="Virtualization" /><summary type="html"><![CDATA[Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances]]></summary></entry><entry><title type="html">Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]</title><link href="http://localhost:4000/network/2022/03/14/1.html" rel="alternate" type="text/html" title="Troubleshooting the problem of not setting IP on Esxi by DHCP[SOLVED]" /><published>2022-03-14T00:00:00+03:30</published><updated>2022-03-14T00:00:00+03:30</updated><id>http://localhost:4000/network/2022/03/14/1</id><content type="html" xml:base="http://localhost:4000/network/2022/03/14/1.html"><![CDATA[<p>When I want to give an IP to a service, I usually use DHCP Reservation and static the IP value by mac if you are in the ESXI system.
