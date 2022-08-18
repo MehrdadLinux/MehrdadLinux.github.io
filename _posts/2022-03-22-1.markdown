@@ -71,5 +71,9 @@ You must go to the location where you installed Vagrant
 
 Sync to folder 
 
+## The latest experience
+
+**dont use this plugin for Fedora and dnf **
+
 done
 Do you have a question?
