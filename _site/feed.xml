@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-19T03:52:54+04:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><entry><title type="html">Open Jupyter Notebook here one click very fast[SOLVED]</title><link href="http://localhost:4000/linux/2022/08/19/1.html" rel="alternate" type="text/html" title="Open Jupyter Notebook here one click very fast[SOLVED]" /><published>2022-08-19T00:00:00+04:30</published><updated>2022-08-19T00:00:00+04:30</updated><id>http://localhost:4000/linux/2022/08/19/1</id><content type="html" xml:base="http://localhost:4000/linux/2022/08/19/1.html"><![CDATA[<p>Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-07T13:31:26+03:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">MehrdadLinux Weblog</title><subtitle>Technical diaries</subtitle><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><entry><title type="html">In Linux, how do I create or Generate random File or Data or String?[SOLVED]</title><link href="http://localhost:4000/linux/2023/01/18/1.html" rel="alternate" type="text/html" title="In Linux, how do I create or Generate random File or Data or String?[SOLVED]" /><published>2023-01-18T00:00:00+03:30</published><updated>2023-01-18T00:00:00+03:30</updated><id>http://localhost:4000/linux/2023/01/18/1</id><content type="html" xml:base="http://localhost:4000/linux/2023/01/18/1.html"><![CDATA[<p>The process of creating a random file can be done in a number of ways: 
+I’m going to create a 10M file using all commands to test this.</p>
+
+<p>It can be done using the following 6 methods.</p>
+
+<p>fallocate: fallocate is used to preallocate or deallocate space to a file.
+truncate: truncate is used to shrink or extend the size of a file to the specified size.
+dd: Copy a file, converting and formatting according to the operands.
+head: head is used to print the first part of files.
+xfs_mkfile: xfs_mkfile command allow us to create a specific size of a file in Linux.
+perl: Perl is a programming language specially designed for text editing.</p>
+
+<h2 id="use-dd">Use dd</h2>
+
+<p>create a 100M file filled with all 0’s.
+        $ dd if=/dev/zero of=100M_filled_with_zeros bs=100M count=1
+create a 100M file filled with random data.
+        $ dd if=/dev/urandom of=100M_filled_with_random_data bs=1M count=100</p>
+
+<h2 id="use-head">Use head</h2>
+
+<p>create a 100M file filled with all 0’s.
+        $ head -c 100M /dev/zero &gt; 100M_filled_with_zeros
+create a 100M file filled with random data.
+        $ head -c 100M /dev/urandom &gt; 100M_filled_with_random_data</p>
+
+<h2 id="use-openssl">Use openssl</h2>
+
+<p>openssl rand -out $testfile -base64 792917038; truncate -s-1 $testfile
+openssl rand -out myfile “$size”
+If you need base64:
+openssl rand -base64 -out myfile “$size”</p>
+
+<h2 id="use-jot">Use jot</h2>
+
+<p>jot -r -c $FILESIZE &gt; $FILE
+truncate –size 1G foo
+shred –iterations 1 foo</p>
+<h2 id="xfs_mkfile">xfs_mkfile</h2>
+
+<p>xfs_mkfile 10M daygeek5.txt</p>
+
+<h2 id="for-strings">For Strings</h2>
+
+<ol>
+  <li>Using the base64 Command
+$ base64 /dev/urandom | head –c 10
+pIS3VBfRhf</li>
+</ol>
+
+<p>$ base64 /dev/urandom | head –c 10 &gt; random_file.txt
+$ cat random_file.txt
+/8ZtS5IfK+</p>
+
+<ol>
+  <li>Using the tr Command</li>
+</ol>
+
+<p>$ tr –dc [:graph:] &lt; /dev/urandom | head –c 10
+m1#Vs:ABp</p>
+
+<p>$ tr –dc [:alnum:] &lt; /dev/urandom | head –c 10
+miB150lFw2</p>
+
+<p>$ tr –dc [:graph:] &lt; /dev/urandom | head –c 10 &gt; random_file.txt
+$ cat random_file.txt
+TKt4r$#Z7r</p>
+
+<ol>
+  <li>
+    <h3 id="using-the-strings-command">Using the strings Command</h3>
+    <p>$ strings -s “” /dev/urandom | head -c 10
+BB2!C5./8
+$ strings -s “” /dev/urandom | head -c 10 &gt; random_file.txt
+$ cat random_file.txt
+7)XM/F%F;^</p>
+  </li>
+  <li>Using a Dictionary
+$ shuf -n 5 /usr/share/dict/words | tr ‘\n’ ‘ ‘ &gt; random_file.txt
+$ cat random_file.txt</li>
+</ol>]]></content><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><category term="linux" /><summary type="html"><![CDATA[The process of creating a random file can be done in a number of ways: I’m going to create a 10M file using all commands to test this.]]></summary></entry><entry><title type="html">Open Jupyter Notebook here one click very fast[SOLVED]</title><link href="http://localhost:4000/linux/2022/08/19/1.html" rel="alternate" type="text/html" title="Open Jupyter Notebook here one click very fast[SOLVED]" /><published>2022-08-19T00:00:00+04:30</published><updated>2022-08-19T00:00:00+04:30</updated><id>http://localhost:4000/linux/2022/08/19/1</id><content type="html" xml:base="http://localhost:4000/linux/2022/08/19/1.html"><![CDATA[<p>Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents.</p>
 
 <h2 id="running-the-jupyter-notebook">Running the Jupyter Notebook</h2>
 
@@ -36,21 +116,7 @@ Nautilus script is an executable shell script that is placed in a special script
 <p>Righclick on folder and select yourscript 
 done</p>
 
-<p>Do you have a question?</p>]]></content><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><category term="linux" /><summary type="html"><![CDATA[Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents.]]></summary></entry><entry><title type="html">Sharp or Number sign, that is the question2</title><link href="http://localhost:4000/programming/2022/08/19/2.html" rel="alternate" type="text/html" title="Sharp or Number sign, that is the question2" /><published>2022-08-19T00:00:00+04:30</published><updated>2022-08-19T00:00:00+04:30</updated><id>http://localhost:4000/programming/2022/08/19/2</id><content type="html" xml:base="http://localhost:4000/programming/2022/08/19/2.html"><![CDATA[<p>Some people think a symbol in front of C# is Sharp are you agree or disagree?</p>
-
-<p>Years after the introduction of C#, the prevalence of very big mistakes or misunderstand in computer society.
-Call # Sharp again of the number sign 
-For example when a junior programmer or junior computer scientist saw a # in Twitter some of them call it sharp :O or hashtag
-although hash is another name for number sign, you can not call it sharp when you saw it on most of the web.
-In this article we are going to discuss, what is different between symbol # we known as the number sign, hash  “#”  and music symbol, sharp, means higher in pitch and we write it “♯” (U+266F in Unicode)</p>
-
-<p>Why the Microsoft call it new programming languages C Sharp? Microsoft wants to introduce a higher-level programming language from C++ with more facilities. They looking for new symbols and they find sharp. The sharp symbol is so perfect because it looks like 4 plus ++++
-and it means higher in pitch in music. They had a very big problem.</p>
-
-<p>You can not type sharp directly from the keyboard :(.
-so they decide to choose hashtag along sharp</p>
-
-<p>In conclusion, although we write C# (pronounce c sharp), this # a lonely pronounce number sign or hash</p>]]></content><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><category term="programming" /><summary type="html"><![CDATA[Some people think a symbol in front of C# is Sharp are you agree or disagree?]]></summary></entry><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/22/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-22T01:00:00+04:30</published><updated>2022-03-22T01:00:00+04:30</updated><id>http://localhost:4000/virtualization/2022/03/22/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/22/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
+<p>Do you have a question?</p>]]></content><author><name>MehrdadLinux</name><email>MehrdadLinux@Gmail.Com</email></author><category term="linux" /><summary type="html"><![CDATA[Jupyter Notebook (formerly IPython Notebook) is a web-based interactive computational environment for creating notebook documents.]]></summary></entry><entry><title type="html">vagrant-cachier dnf problem[SOLVED]</title><link href="http://localhost:4000/virtualization/2022/03/22/1.html" rel="alternate" type="text/html" title="vagrant-cachier dnf problem[SOLVED]" /><published>2022-03-22T01:00:00+04:30</published><updated>2022-03-22T01:00:00+04:30</updated><id>http://localhost:4000/virtualization/2022/03/22/1</id><content type="html" xml:base="http://localhost:4000/virtualization/2022/03/22/1.html"><![CDATA[<p>Vagrant-cachier is a vagrant plugin that helps you reduce waiting for boxes to be provisioned by sharing a common package cache among similar VM instances</p>
 
 <h2 id="installation">Installation</h2>
 

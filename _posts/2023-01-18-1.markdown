@@ -1,0 +1,82 @@
+---
+layout: post
+title: 'In Linux, how do I create or Generate random File or Data or String?[SOLVED]'
+date: '2023-01-18'
+categories: linux
+---
+The process of creating a random file can be done in a number of ways: 
+I’m going to create a 10M file using all commands to test this.
+
+It can be done using the following 6 methods.
+
+fallocate: fallocate is used to preallocate or deallocate space to a file.
+truncate: truncate is used to shrink or extend the size of a file to the specified size.
+dd: Copy a file, converting and formatting according to the operands.
+head: head is used to print the first part of files.
+xfs_mkfile: xfs_mkfile command allow us to create a specific size of a file in Linux.
+perl: Perl is a programming language specially designed for text editing.
+
+## Use dd
+    
+create a 100M file filled with all 0’s.
+        $ dd if=/dev/zero of=100M_filled_with_zeros bs=100M count=1
+create a 100M file filled with random data.
+        $ dd if=/dev/urandom of=100M_filled_with_random_data bs=1M count=100
+
+## Use head
+
+create a 100M file filled with all 0’s.
+        $ head -c 100M /dev/zero > 100M_filled_with_zeros
+create a 100M file filled with random data.
+        $ head -c 100M /dev/urandom > 100M_filled_with_random_data 
+
+## Use openssl
+
+openssl rand -out $testfile -base64 792917038; truncate -s-1 $testfile
+openssl rand -out myfile "$size"
+If you need base64:
+openssl rand -base64 -out myfile "$size"
+
+## Use jot
+
+jot -r -c $FILESIZE > $FILE
+truncate --size 1G foo
+shred --iterations 1 foo
+## xfs_mkfile 
+
+xfs_mkfile 10M daygeek5.txt
+
+
+## For Strings
+
+2. Using the base64 Command
+$ base64 /dev/urandom | head –c 10
+pIS3VBfRhf
+
+$ base64 /dev/urandom | head –c 10 > random_file.txt
+$ cat random_file.txt
+/8ZtS5IfK+
+
+3. Using the tr Command
+
+$ tr –dc [:graph:] < /dev/urandom | head –c 10
+m1#Vs\:ABp
+
+$ tr –dc [:alnum:] < /dev/urandom | head –c 10
+miB150lFw2
+
+$ tr –dc [:graph:] < /dev/urandom | head –c 10 > random_file.txt
+$ cat random_file.txt
+TKt4r$#Z7r
+
+4. ### Using the strings Command
+$ strings -s "" /dev/urandom | head -c 10
+BB2\!C5./8
+$ strings -s "" /dev/urandom | head -c 10 > random_file.txt
+$ cat random_file.txt
+7)XM/F%F;^
+5. Using a Dictionary
+$ shuf -n 5 /usr/share/dict/words | tr '\n' ' ' > random_file.txt
+$ cat random_file.txt
+
+
