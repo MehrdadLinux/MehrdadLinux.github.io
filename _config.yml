@@ -26,7 +26,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-theme: minima
+theme: jekyll-theme-minimal
 
 jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics
